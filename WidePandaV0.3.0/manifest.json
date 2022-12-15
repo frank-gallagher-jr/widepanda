@@ -1,0 +1,32 @@
+
+
+
+{
+    "name": "WidePanda",
+    "manifest_version": 3,
+    "version": "0.3.0",
+    "description": "WidePanda V3: This Chrome Browser Extension allows it's users to widen the BigPanda Incidents navigation pane within the BigPanda User Interface.  To reset to the default width, simply disable the extension and refresh the page. Enjoy!",
+    "author": "Frank Gallagher, Jr",
+     "icons": {
+      "16": "./img/icon16.png",
+      "48": "./img/icon48.png",
+      "128": "./img/icon128.png"
+    },
+    "action": {
+        "default_icons": {
+        "16": "./img/icon16.png",
+        "48": "./img/icon48.png",
+        "128": "./img/icon128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.bigpanda.io/*"
+            ],
+            "js": [
+                "app.js"
+            ]
+        }
+    ]
+}
